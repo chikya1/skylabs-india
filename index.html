@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skylabs India — Building ventures that endure.</title>
-  <meta name="description" content="Skylabs India is a portfolio of independent businesses — Invictus IMC, Jemmah, and India Coin — each solving real problems with conviction and craft." />
+  <title>SKYLabs India — Live Beyond Lights</title>
+  <meta name="description" content="SKYLabs India is a portfolio of independent businesses — Invictus IMC, Jemmah, and India Coin." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
@@ -25,25 +25,44 @@
     html { scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
     .page { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+
+    /* NAV */
     nav { padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 0.5px solid #141414; }
-    .nav-brand { font-size: 13px; letter-spacing: 0.12em; color: var(--text-muted); text-transform: uppercase; }
+    .nav-brand { font-family: 'EB Garamond', serif; font-size: 22px; font-weight: 400; letter-spacing: 0.04em; color: #ffffff; }
+    .nav-brand span { color: var(--gold); }
     .nav-domain { font-size: 11px; color: var(--text-dim); letter-spacing: 0.08em; }
+
+    /* HERO */
     .hero { padding: 5rem 0 4rem; border-bottom: 0.5px solid var(--border); }
-    .eyebrow { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 1.5rem; }
-    .hero h1 { font-family: 'EB Garamond', serif; font-size: clamp(36px, 6vw, 56px); font-weight: 400; line-height: 1.1; color: var(--text-primary); margin-bottom: 1.25rem; letter-spacing: -0.01em; }
+    .hero h1 { font-family: 'EB Garamond', serif; font-size: clamp(42px, 7vw, 68px); font-weight: 400; line-height: 1.05; color: var(--text-primary); letter-spacing: -0.01em; }
     .hero h1 em { color: var(--gold); font-style: normal; }
-    .hero p { font-size: 16px; color: var(--text-muted); max-width: 480px; line-height: 1.8; }
-    .section-label { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-faint); display: flex; align-items: center; gap: 12px; padding: 3rem 0 0; }
-    .section-label::after { content: ''; flex: 1; height: 0.5px; background: #181818; }
-    .venture { border-top: 0.5px solid var(--border); padding: 3rem 0; display: grid; grid-template-columns: 64px 1fr 52px; gap: 2rem; align-items: start; }
+
+    /* SECTION LABEL */
+    .section-label { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: #8a8580; display: flex; align-items: center; gap: 12px; padding: 3rem 0 0; font-weight: 500; }
+    .section-label::after { content: ''; flex: 1; height: 0.5px; background: #2a2a2a; }
+
+    /* VENTURE CARDS */
+    .venture { border-top: 0.5px solid var(--border); padding: 3rem 0; display: grid; grid-template-columns: 64px 1fr 64px; gap: 2rem; align-items: start; }
     .venture:last-of-type { border-bottom: 0.5px solid var(--border); }
     .venture-num { font-family: monospace; font-size: 11px; color: var(--text-faint); letter-spacing: 0.1em; padding-top: 6px; }
     .venture-tag { display: inline-block; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); background: #0f0f0f; border: 0.5px solid var(--border-mid); padding: 3px 10px; border-radius: 2px; margin-bottom: 1rem; }
     .venture h2 { font-family: 'EB Garamond', serif; font-size: 30px; font-weight: 400; color: var(--text-primary); margin-bottom: 0.75rem; letter-spacing: -0.01em; }
     .venture h2.gold { color: var(--gold); }
-    .venture p { font-size: 14px; color: var(--text-muted); line-height: 1.8; max-width: 480px; }
-    .venture-icon { width: 44px; height: 44px; border: 0.5px solid var(--border-mid); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--text-faint); font-size: 18px; }
-    .venture-icon.gold-icon { border-color: #2a2010; color: #6b5520; }
+    .venture p { font-size: 14px; color: var(--text-muted); line-height: 1.8; max-width: 480px; margin-bottom: 1.25rem; }
+
+    /* VENTURE LOGO */
+    .venture-logo { width: 56px; height: 56px; border: 0.5px solid var(--border-mid); border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #fff; }
+    .venture-logo img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
+    .venture-logo.dark { background: #111; }
+    .venture-icon { width: 56px; height: 56px; border: 0.5px solid #2a2010; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #6b5520; font-size: 22px; }
+
+    /* LINKS & BUTTONS */
+    .venture-link { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); text-decoration: none; border: 0.5px solid var(--gold-dim); padding: 7px 16px; border-radius: 2px; transition: background 0.2s; }
+    .venture-link:hover { background: rgba(201,169,110,0.08); }
+    .download-btn { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #0a0a0a; background: var(--gold); text-decoration: none; padding: 8px 18px; border-radius: 2px; font-weight: 500; transition: opacity 0.2s; margin-right: 10px; }
+    .download-btn:hover { opacity: 0.85; }
+
+    /* CONTACT */
     .contact { padding: 4rem 0 5rem; }
     .contact-intro { margin-top: 2.5rem; margin-bottom: 2.5rem; }
     .contact-intro h2 { font-family: 'EB Garamond', serif; font-size: 32px; font-weight: 400; color: var(--text-primary); margin-bottom: 0.5rem; }
@@ -62,54 +81,71 @@
     .form-status { margin-top: 1rem; font-size: 13px; display: none; }
     .form-status.success { color: #5a9e6f; display: block; }
     .form-status.error { color: #c96e6e; display: block; }
+
+    /* FOOTER */
     footer { border-top: 0.5px solid #141414; padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; }
     footer p { font-size: 11px; color: var(--text-faint); }
+
     @media (max-width: 600px) {
       .venture { grid-template-columns: 40px 1fr; }
-      .venture-icon { display: none; }
+      .venture-logo, .venture-icon { display: none; }
       .hero { padding: 3rem 0 2.5rem; }
     }
   </style>
 </head>
 <body>
 <div class="page">
+
   <nav>
-    <div class="nav-brand">Skylabs India</div>
+    <div class="nav-brand"><span>SKY</span>Labs India</div>
     <div class="nav-domain">skylabsindia.com</div>
   </nav>
+
   <section class="hero">
-    <div class="eyebrow">Holding Company · Bengaluru, India</div>
-    <h1>Building ventures<br>that <em>endure.</em></h1>
-    <p>Skylabs India is a portfolio of independent businesses, each solving real problems with conviction and craft.</p>
+    <h1>Live Beyond <em>Lights.</em></h1>
   </section>
-  <div class="section-label">Our ventures</div>
+
+  <div class="section-label">Ventures</div>
+
   <article class="venture">
     <div class="venture-num">01</div>
     <div>
       <div class="venture-tag">Manufacturing · Marketplace</div>
       <h2>Invictus IMC</h2>
       <p>A manufacturing marketplace connecting buyers and suppliers across India's industrial ecosystem. Built for scale, trust, and operational efficiency — bringing the depth of traditional manufacturing onto a modern platform.</p>
+      <a class="venture-link" href="https://www.invictusimc.com/" target="_blank" rel="noopener">Visit platform →</a>
     </div>
-    <div class="venture-icon" aria-hidden="true"><i class="ti ti-building-factory-2"></i></div>
+    <div class="venture-logo">
+      <img src="images/invictus.png" alt="Invictus IMC logo" />
+    </div>
   </article>
+
   <article class="venture">
     <div class="venture-num">02</div>
     <div>
       <div class="venture-tag">AI · Personal Assistant · Offline</div>
       <h2>Jemmah</h2>
       <p>A full-fledged personal assistant that lives entirely on your device. No cloud dependency, no data leaving your hands. Intelligent, private, and always available — even without an internet connection.</p>
+      <a class="download-btn" href="https://drive.google.com/uc?export=download&id=1-FKk2M-uuzdDbWZzEf7Jn6cTpLuzP_86" target="_blank" rel="noopener">
+        <i class="ti ti-brand-android" aria-hidden="true"></i> Download APK
+      </a>
     </div>
-    <div class="venture-icon" aria-hidden="true"><i class="ti ti-brain"></i></div>
+    <div class="venture-logo dark">
+      <img src="images/jemmah.png" alt="Jemmah logo" />
+    </div>
   </article>
+
   <article class="venture">
     <div class="venture-num">03</div>
     <div>
       <div class="venture-tag">Cryptocurrency · Digital Asset</div>
       <h2 class="gold">India Coin</h2>
       <p>An experimental digital currency project rooted in curiosity and craft. An exploration of decentralised finance within the Indian context — built as a hobby, grown into an idea worth watching.</p>
+      <a class="venture-link" href="https://github.com/chikya1/IndiaCoin/wiki/About-IndiaCoin" target="_blank" rel="noopener">Learn more →</a>
     </div>
-    <div class="venture-icon gold-icon" aria-hidden="true"><i class="ti ti-coin"></i></div>
+    <div class="venture-icon"><i class="ti ti-coin" aria-hidden="true"></i></div>
   </article>
+
   <section class="contact" id="contact">
     <div class="section-label">Get in touch</div>
     <div class="contact-intro">
@@ -132,10 +168,12 @@
       </form>
     </div>
   </section>
+
   <footer>
-    <p>© 2025 Skylabs India. All rights reserved.</p>
+    <p>© 2025 SKYLabs India. All rights reserved.</p>
     <p>skylabsindia.com</p>
   </footer>
+
 </div>
 <script>
   const ta = document.getElementById('message');

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skylabs India — Building ventures that endure.</title>
+  <meta name="description" content="Skylabs India is a portfolio of independent businesses — Invictus IMC, Jemmah, and India Coin — each solving real problems with conviction and craft." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #c9a96e;
+      --gold-dim: #8a6f3e;
+      --bg: #0a0a0a;
+      --surface: #0f0f0f;
+      --border: #1f1f1f;
+      --border-mid: #2a2a2a;
+      --text-primary: #e8e4dc;
+      --text-muted: #6b6560;
+      --text-dim: #3a3530;
+      --text-faint: #1f1e1c;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    .page { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    nav { padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 0.5px solid #141414; }
+    .nav-brand { font-size: 13px; letter-spacing: 0.12em; color: var(--text-muted); text-transform: uppercase; }
+    .nav-domain { font-size: 11px; color: var(--text-dim); letter-spacing: 0.08em; }
+    .hero { padding: 5rem 0 4rem; border-bottom: 0.5px solid var(--border); }
+    .eyebrow { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 1.5rem; }
+    .hero h1 { font-family: 'EB Garamond', serif; font-size: clamp(36px, 6vw, 56px); font-weight: 400; line-height: 1.1; color: var(--text-primary); margin-bottom: 1.25rem; letter-spacing: -0.01em; }
+    .hero h1 em { color: var(--gold); font-style: normal; }
+    .hero p { font-size: 16px; color: var(--text-muted); max-width: 480px; line-height: 1.8; }
+    .section-label { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-faint); display: flex; align-items: center; gap: 12px; padding: 3rem 0 0; }
+    .section-label::after { content: ''; flex: 1; height: 0.5px; background: #181818; }
+    .venture { border-top: 0.5px solid var(--border); padding: 3rem 0; display: grid; grid-template-columns: 64px 1fr 52px; gap: 2rem; align-items: start; }
+    .venture:last-of-type { border-bottom: 0.5px solid var(--border); }
+    .venture-num { font-family: monospace; font-size: 11px; color: var(--text-faint); letter-spacing: 0.1em; padding-top: 6px; }
+    .venture-tag { display: inline-block; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); background: #0f0f0f; border: 0.5px solid var(--border-mid); padding: 3px 10px; border-radius: 2px; margin-bottom: 1rem; }
+    .venture h2 { font-family: 'EB Garamond', serif; font-size: 30px; font-weight: 400; color: var(--text-primary); margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+    .venture h2.gold { color: var(--gold); }
+    .venture p { font-size: 14px; color: var(--text-muted); line-height: 1.8; max-width: 480px; }
+    .venture-icon { width: 44px; height: 44px; border: 0.5px solid var(--border-mid); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--text-faint); font-size: 18px; }
+    .venture-icon.gold-icon { border-color: #2a2010; color: #6b5520; }
+    .contact { padding: 4rem 0 5rem; }
+    .contact-intro { margin-top: 2.5rem; margin-bottom: 2.5rem; }
+    .contact-intro h2 { font-family: 'EB Garamond', serif; font-size: 32px; font-weight: 400; color: var(--text-primary); margin-bottom: 0.5rem; }
+    .contact-intro p { font-size: 14px; color: var(--text-dim); }
+    .form-wrap { background: var(--surface); border: 0.5px solid var(--border); border-radius: 6px; padding: 2rem 2.25rem; max-width: 560px; }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); display: block; margin-bottom: 0.6rem; }
+    .form-input { width: 100%; background: var(--bg); border: 0.5px solid var(--border-mid); color: var(--text-primary); padding: 11px 14px; font-size: 14px; border-radius: 3px; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; }
+    .form-input::placeholder { color: var(--text-faint); }
+    .form-input:focus { border-color: var(--gold-dim); }
+    textarea.form-input { resize: none; height: 130px; line-height: 1.7; }
+    .char-count { font-size: 11px; color: var(--text-faint); text-align: right; margin-top: 5px; transition: color 0.2s; }
+    .form-btn { background: var(--gold); color: #0a0a0a; border: none; padding: 12px 28px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; border-radius: 2px; font-family: 'Inter', sans-serif; font-weight: 500; transition: opacity 0.2s; }
+    .form-btn:hover { opacity: 0.85; }
+    .form-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .form-status { margin-top: 1rem; font-size: 13px; display: none; }
+    .form-status.success { color: #5a9e6f; display: block; }
+    .form-status.error { color: #c96e6e; display: block; }
+    footer { border-top: 0.5px solid #141414; padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; }
+    footer p { font-size: 11px; color: var(--text-faint); }
+    @media (max-width: 600px) {
+      .venture { grid-template-columns: 40px 1fr; }
+      .venture-icon { display: none; }
+      .hero { padding: 3rem 0 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <nav>
+    <div class="nav-brand">Skylabs India</div>
+    <div class="nav-domain">skylabsindia.com</div>
+  </nav>
+  <section class="hero">
+    <div class="eyebrow">Holding Company · Bengaluru, India</div>
+    <h1>Building ventures<br>that <em>endure.</em></h1>
+    <p>Skylabs India is a portfolio of independent businesses, each solving real problems with conviction and craft.</p>
+  </section>
+  <div class="section-label">Our ventures</div>
+  <article class="venture">
+    <div class="venture-num">01</div>
+    <div>
+      <div class="venture-tag">Manufacturing · Marketplace</div>
+      <h2>Invictus IMC</h2>
+      <p>A manufacturing marketplace connecting buyers and suppliers across India's industrial ecosystem. Built for scale, trust, and operational efficiency — bringing the depth of traditional manufacturing onto a modern platform.</p>
+    </div>
+    <div class="venture-icon" aria-hidden="true"><i class="ti ti-building-factory-2"></i></div>
+  </article>
+  <article class="venture">
+    <div class="venture-num">02</div>
+    <div>
+      <div class="venture-tag">AI · Personal Assistant · Offline</div>
+      <h2>Jemmah</h2>
+      <p>A full-fledged personal assistant that lives entirely on your device. No cloud dependency, no data leaving your hands. Intelligent, private, and always available — even without an internet connection.</p>
+    </div>
+    <div class="venture-icon" aria-hidden="true"><i class="ti ti-brain"></i></div>
+  </article>
+  <article class="venture">
+    <div class="venture-num">03</div>
+    <div>
+      <div class="venture-tag">Cryptocurrency · Digital Asset</div>
+      <h2 class="gold">India Coin</h2>
+      <p>An experimental digital currency project rooted in curiosity and craft. An exploration of decentralised finance within the Indian context — built as a hobby, grown into an idea worth watching.</p>
+    </div>
+    <div class="venture-icon gold-icon" aria-hidden="true"><i class="ti ti-coin"></i></div>
+  </article>
+  <section class="contact" id="contact">
+    <div class="section-label">Get in touch</div>
+    <div class="contact-intro">
+      <h2>Interested in partnering?</h2>
+      <p>Tell us what you have in mind. We read every message.</p>
+    </div>
+    <div class="form-wrap">
+      <form id="contactForm">
+        <div class="form-group">
+          <label class="form-label" for="email">Email address</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Your message</label>
+          <textarea class="form-input" id="message" name="message" placeholder="Tell us about your interest, proposal, or question..." required></textarea>
+          <div class="char-count" id="charCount">0 / 2000</div>
+        </div>
+        <button class="form-btn" type="submit" id="submitBtn">Send message →</button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <p>© 2025 Skylabs India. All rights reserved.</p>
+    <p>skylabsindia.com</p>
+  </footer>
+</div>
+<script>
+  const ta = document.getElementById('message');
+  const cc = document.getElementById('charCount');
+  ta.addEventListener('input', () => {
+    const len = ta.value.length;
+    if (len > 2000) ta.value = ta.value.slice(0, 2000);
+    cc.textContent = Math.min(len, 2000) + ' / 2000';
+    cc.style.color = len > 1800 ? '#c9a96e' : '#3a3530';
+  });
+  document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    const status = document.getElementById('formStatus');
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    status.className = 'form-status';
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, message })
+      });
+      const data = await res.json();
+      if (res.ok) {
+        status.textContent = 'Message received. We will be in touch.';
+        status.classList.add('success');
+        e.target.reset();
+        cc.textContent = '0 / 2000';
+      } else {
+        status.textContent = data.error || 'Something went wrong. Please try again.';
+        status.classList.add('error');
+      }
+    } catch {
+      status.textContent = 'Network error. Please check your connection.';
+      status.classList.add('error');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Send message →';
+    }
+  });
+</script>
+</body>
+</html>

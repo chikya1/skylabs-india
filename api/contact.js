@@ -13,10 +13,10 @@ module.exports = async (req, res) => {
   if (req.method === 'OPTIONS') return res.status(200).end()
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
 
-  const { email, message } = req.body || {}
+  const { email, venture, message } = req.body || {}
 
-  if (!email || !message) {
-    return res.status(400).json({ error: 'Email and message are required' })
+  if (!email || !message || !venture) {
+    return res.status(400).json({ error: 'All fields are required' })
   }
 
   if (message.length > 2000) {
@@ -30,7 +30,7 @@ module.exports = async (req, res) => {
 
   const { error } = await supabase
     .from('contact_queries')
-    .insert([{ email, message }])
+    .insert([{ email, venture, message }])
 
   if (error) {
     console.error(error)
